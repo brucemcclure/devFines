@@ -1,0 +1,15 @@
+<h1>This is all the users</h1>
+
+<a href="/userss/new">Create New Author</a>
+
+{{#each users}}
+    <div>
+        <p>Name: {{ this.name }}</p>
+        <p>Bio: {{ this.bio }}</p>
+        <p>Gender: {{ this.gender }}</p>
+    </div>
+    <a href="/users/{{this._id}}">View Author</a>
+    <a href="/users/{{this._id}}?_method=DELETE">Delete User</a>
+    <hr />
+
+{{/each}}
