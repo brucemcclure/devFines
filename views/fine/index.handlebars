@@ -1,0 +1,13 @@
+<h1>Fines</h1>
+
+<a href="/fines/new">Create New Fine</a>
+
+{{#each fines}}
+    <div>
+        <p>Name: {{ this.name }}</p>
+    </div>
+    <a href="/fines/{{this._id}}">View Fine</a>
+    <a href="/fines/{{this._id}}?_method=DELETE">Delete Fine</a>
+    <hr />
+
+{{/each}}
